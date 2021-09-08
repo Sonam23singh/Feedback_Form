@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Script for model-->
+    <script>
+      $(document).ready(function () {
+        $("#Myimg").click(function () {
+          $("#Mymodal").modal("show");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- logo -->
+    <section>
+      <img class="logo" src="logo.svg" />
+      <div class="bcolor">
+        <div class="text-center">
+          <h2 style="color: #2d517a"><b>Feedback Form</b></h2>
+          <p>
+            We would love to hear your thoughts,concerns or problem with
+            anything so we can improve!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10 col-lg-10 col-md-10">
+            <br />
+            <h3>Rate Us!!</h3>
+            <h4>How was you experience with us ?</h4>
+
+            <!-- emoji placing-->
+
+            <div class="radio-buttons">
+              <label class="custom-radio">
+                <input type="radio" name="radio" checked />
+                <span class="radio-btn">
+                  <div class="emoji-icon">
+                    <i class="las la-laugh-squint" style="color: green"></i>
+                    <h3>Liked it</h3>
+                  </div>
+                </span>
+              </label>
+              <label class="custom-radio">
+                <input type="radio" name="radio" />
+                <span class="radio-btn">
+                  <div class="emoji-icon">
+                    <i
+                      class="las la-meh"
+                      style="color: rgba(255, 187, 0, 0.548)"
+                    ></i>
+                    <h3>Average</h3>
+                  </div>
+                </span>
+              </label>
+              <label class="custom-radio" id="Myimg">
+                <input type="radio" name="radio" />
+                <span class="radio-btn">
+                  <div class="emoji-icon">
+                    <i class="las la-tired" style="color: red"></i>
+                    <h3>Hated it</h3>
+                  </div>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- form -->
+          <form>
+            <textarea
+              id="textRemark"
+              placeholder="Give more Feedback..."
+              style="
+                padding: 6px 8px;
+                width: 80%;
+                max-width: 550px;
+                height: 100px;
+                font-family: serif;
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 4px;
+                margin-top: 30px;
+              "
+            ></textarea>
+          </form>
+          <br />
+          <!-- button -->
+          <a href="thankyou.html">
+            <input class="fancy-btn primary" type="submit" value="Submit" />
+          </a>
+        </div>
+
+        <!-- .modal for angry -->
+        <div
+          class="modal fade"
+          id="Mymodal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  ×
+                </button>
+                <img src="unhappy.png" />
+                <h4 class="modal-title">I am Not Happy because</h4>
+              </div>
+              <div class="modal-body">
+                <form id="MyForm" action="" method="post">
+                  <div class="row mt-0 ml-5">
+                    <div class="col-12 my_checkbox">
+                      <div class="row">
+                        <input type="checkbox" id="screenshots" />
+                        <label for="javascript" id="screenshots_label"
+                          >Our service was not good</label
+                        >
+                      </div>
+                      <div class="row">
+                        <input type="checkbox" id="RAW" />
+                        <label for="RAW">Have problem at the center</label>
+                      </div>
+                      <div class="row">
+                        <input type="checkbox" id="Library" />
+                        <label for="Library"
+                          >Doctors were not cooperative</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-1"></div>
+      </div>
+    </section>
+  </body>
+</html>
